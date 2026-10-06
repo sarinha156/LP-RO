@@ -1,0 +1,8 @@
+# Ignorar arquivo de alta resolução que excede o limite de 100MB do GitHub
+wallpapers/Wallpapers/wallpaper.png
+
+# Arquivos de sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store

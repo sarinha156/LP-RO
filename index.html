@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rodrigo Hilário Advocacia | Defesa Previdenciária & Bancária • Atendimento 100% Online</title>
+  
+  <!-- Metatags e SEO Estratégico -->
+  <meta name="description" content="Assessoria jurídica individualizada, 100% online. Destravamos benefícios previdenciários legítimos e combatemos fraudes bancárias — sem juridiquês, sem cartório. Dr. Rodrigo Hilário - OAB/SP 536.466." />
+  <meta name="keywords" content="Advogado Previdenciário, Advogado INSS, BPC LOAS, Salário Maternidade Desempregada, Golpe do Pix, Superendividamento, Contratos RMC, Rodrigo Hilário Advocacia, OAB SP 536466" />
+  <meta name="author" content="Rodrigo Hilário Advocacia" />
+
+  <!-- Google Fonts: Cinzel, Playfair Display, Montserrat & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#EAA636',
+              goldHover: '#F5B853',
+              dark: '#060911',
+              surface: '#0B1120',
+              card: '#0F172A',
+              cardHover: '#15223E',
+              marsala: '#7A1C1D',
+              green: '#10B981'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            cinzel: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Folha de Estilos com Efeito de Fusão de Imagem -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-brand-dark text-slate-100 antialiased overflow-x-hidden">
+
+  <!-- =========================================================================
+       1. TOPBAR INSTITUCIONAL
+       ========================================================================= -->
+  <div class="bg-brand-dark/95 border-b border-white/[0.07] text-xs py-2 px-4 sm:px-8 text-slate-300">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 text-brand-gold font-semibold font-cinzel tracking-wider">
+          <i class="fa-solid fa-scale-balanced text-brand-gold"></i>
+          Dr. Rodrigo Hilário • OAB/SP nº 536.466
+        </span>
+        <span class="hidden md:inline-block text-slate-600">|</span>
+        <span class="hidden md:inline-flex items-center gap-1.5 text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
+          Atendimento 100% Online em Todo o Brasil
+        </span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="mailto:rodrigo.hilario@adv.oabsp.org.br" class="hover:text-brand-gold transition-colors flex items-center gap-1.5 text-slate-300">
+          <i class="fa-regular fa-envelope text-brand-gold"></i>
+          rodrigo.hilario@adv.oabsp.org.br
+        </a>
+        <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Acessei%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors flex items-center gap-1.5">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+          (11) 94522-1206
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. HEADER / NAVBAR TRANSPARENTE
+       ========================================================================= -->
+  <header id="mainNavbar" class="sticky top-0 z-50 transition-all duration-300 backdrop-blur-xl bg-brand-dark/85 border-b border-white/[0.07]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-3.5 flex items-center justify-between">
+      
+      <!-- Logotipo Oficial da Marca -->
+      <a href="#inicio" class="flex items-center gap-3">
+        <img src="logo/LogosSemFundo/SVG/logodourado-2.svg" alt="Rodrigo Hilário Advocacia" class="h-9 sm:h-11 w-auto" />
+      </a>
+
+      <!-- Menu Central Desktop -->
+      <nav class="hidden lg:flex items-center gap-8 text-xs sm:text-sm font-medium text-slate-300">
+        <a href="#inicio" class="hover:text-brand-gold transition-colors">Início</a>
+        <a href="#areas-resumo" class="hover:text-brand-gold transition-colors">Especialidades</a>
+        <a href="#previdenciario" class="hover:text-brand-gold transition-colors">Benefícios INSS</a>
+        <a href="#bancario" class="hover:text-brand-gold transition-colors">Direito Bancário</a>
+        <a href="#metodo" class="hover:text-brand-gold transition-colors">Método & Ética</a>
+        <a href="#como-funciona" class="hover:text-brand-gold transition-colors">Como Funciona</a>
+        <a href="#faq" class="hover:text-brand-gold transition-colors">Dúvidas</a>
+      </nav>
+
+      <!-- Botão WhatsApp -->
+      <div class="hidden sm:flex items-center gap-4">
+        <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Acessei%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" rel="noopener noreferrer" class="btn-custom text-xs font-bold !py-2.5 !px-5 rounded">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+
+      <!-- Botão Menu Mobile -->
+      <button id="mobileMenuBtn" class="lg:hidden text-slate-200 hover:text-brand-gold focus:outline-none p-2" aria-label="Menu">
+        <i class="fa-solid fa-bars-staggered text-xl"></i>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Menu Mobile Retrátil -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-brand-dark/95 backdrop-blur-2xl hidden opacity-0 translate-x-full transition-all duration-300 flex flex-col p-6">
+    <div class="flex items-center justify-between pb-6 border-b border-white/10">
+      <img src="logo/LogosSemFundo/SVG/logodourado-2.svg" alt="Rodrigo Hilário Advocacia" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-slate-300 hover:text-brand-gold text-2xl p-2" aria-label="Fechar">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="flex flex-col gap-5 mt-8 text-base font-medium">
+      <a href="#inicio" class="mobile-nav-link text-slate-200 hover:text-brand-gold">Início</a>
+      <a href="#areas-resumo" class="mobile-nav-link text-slate-200 hover:text-brand-gold">Especialidades</a>
+      <a href="#previdenciario" class="mobile-nav-link text-slate-200 hover:text-brand-gold">Benefícios INSS</a>
+      <a href="#bancario" class="mobile-nav-link text-slate-200 hover:text-brand-gold">Direito Bancário</a>
+      <a href="#metodo" class="mobile-nav-link text-slate-200 hover:text-brand-gold">Método & Ética</a>
+      <a href="#como-funciona" class="mobile-nav-link text-slate-200 hover:text-brand-gold">Como Funciona</a>
+      <a href="#faq" class="mobile-nav-link text-slate-200 hover:text-brand-gold">Dúvidas Frequentes</a>
+    </div>
+    <div class="mt-auto pt-8 border-t border-white/10">
+      <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Acessei%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" rel="noopener noreferrer" class="btn-custom w-full text-center font-bold py-3.5 rounded flex items-center justify-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg"></i>
+        <span>Falar no WhatsApp</span>
+      </a>
+      <p class="text-xs text-center text-slate-400 mt-4">OAB/SP nº 536.466 • Atendimento Seguro</p>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       3. HERO BANNER CINEMATOGRÁFICO COM IMAGEM FUNDIDA AO FUNDO
+       (INSPIRADO NO PRINT ENVIADO: RETRATO SE DISSOLVENDO NO PRETO ABSOLUTO + MARCA D'ÁGUA)
+       ========================================================================= -->
+  <section id="inicio" class="relative min-h-[88vh] lg:min-h-[92vh] flex items-center overflow-hidden py-16 lg:py-24 bg-brand-dark">
+    
+    <!-- Marca d'Água Gigante Monograma / Tipográfica (Como o 'Q' do print) -->
+    <div class="watermark-letter-bg hidden lg:block">RH</div>
+
+    <!-- Fundo Sutil de Iluminação / Themis -->
+    <div class="absolute inset-0 z-0 pointer-events-none">
+      <div class="absolute top-0 right-1/4 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 right-10 w-[500px] h-[500px] bg-brand-marsala/10 rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- Retrato do Dr. Rodrigo Fundindo-se ao Fundo (Sem Moldura, Sem Caixa!) -->
+    <div class="absolute right-0 top-0 bottom-0 w-full lg:w-[52%] z-10 pointer-events-none flex items-end justify-end overflow-hidden">
+      <!-- Imagem com Máscara Radial e Gradientes que a Dissolvem no Fundo Escuro -->
+      <div class="relative w-full h-full max-h-[820px] flex items-end justify-end">
+        
+        <!-- A Foto Real do Dr. Rodrigo em Alta Definição -->
+        <img src="RODRIGO/1.jpeg" alt="Dr. Rodrigo Hilário - Advogado" class="h-[92%] w-auto max-w-full object-cover object-top fusion-image-mask" />
+        
+        <!-- Gradientes de Sobreposição Suaves para Garantir a Fusão Perfeita com o Fundo -->
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/70 to-transparent lg:w-1/2"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-transparent h-1/3 bottom-0 top-auto"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/90 via-transparent to-transparent h-1/4"></div>
+      </div>
+    </div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Coluna de Texto: Tipografia Editorial Pura -->
+        <div class="lg:col-span-8 space-y-6 max-w-2xl">
+          
+          <!-- Pre-title no Estilo do Print ("— What People Say") -->
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-[2px] bg-brand-gold inline-block"></span>
+            <span class="id-color font-serif-luxury text-sm sm:text-base font-medium tracking-wide">
+              Assessoria Jurídica Individualizada
+            </span>
+          </div>
+
+          <!-- Headline Editorial de Alto Impacto -->
+          <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-extrabold text-white leading-[1.12] font-heading">
+            Seus direitos não podem ficar presos na fila do INSS ou na ganância dos bancos.
+          </h1>
+
+          <!-- Lead Text Acolhedor -->
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+            Assessoria individualizada, 100% online. Destravamos benefícios previdenciários legítimos e combatemos fraudes bancárias — sem juridiquês, sem cartório.
+          </p>
+
+          <!-- Pílulas de Especialidades -->
+          <div class="flex flex-wrap items-center gap-2 pt-1">
+            <span class="px-3 py-1.5 rounded bg-brand-surface/90 border border-white/10 text-xs text-slate-300 font-medium">
+              <i class="fa-solid fa-hands-holding-child text-brand-gold mr-1.5"></i>BPC / LOAS
+            </span>
+            <span class="px-3 py-1.5 rounded bg-brand-surface/90 border border-white/10 text-xs text-slate-300 font-medium">
+              <i class="fa-solid fa-person-breastfeeding text-brand-gold mr-1.5"></i>Salário-Maternidade
+            </span>
+            <span class="px-3 py-1.5 rounded bg-brand-surface/90 border border-white/10 text-xs text-slate-300 font-medium">
+              <i class="fa-solid fa-shield-virus text-brand-gold mr-1.5"></i>Golpes do Pix
+            </span>
+            <span class="px-3 py-1.5 rounded bg-brand-surface/90 border border-white/10 text-xs text-slate-300 font-medium">
+              <i class="fa-solid fa-credit-card text-brand-gold mr-1.5"></i>Contratos RMC
+            </span>
+            <span class="px-3 py-1.5 rounded bg-brand-surface/90 border border-white/10 text-xs text-slate-300 font-medium">
+              <i class="fa-solid fa-hand-holding-dollar text-brand-gold mr-1.5"></i>Superendividamento
+            </span>
+          </div>
+
+          <!-- Ação Principal (.btn-custom) -->
+          <div class="pt-3 flex flex-col sm:flex-row sm:items-center gap-5">
+            <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Acessei%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" rel="noopener noreferrer" class="btn-custom text-sm font-bold">
+              <i class="fa-regular fa-comments text-lg"></i>
+              <span>Iniciar Análise do Meu Caso</span>
+            </a>
+            <div class="text-xs text-slate-400 flex flex-col justify-center">
+              <span class="text-slate-200 font-semibold flex items-center gap-1.5">
+                <i class="fa-solid fa-bolt text-brand-gold text-xs"></i>
+                Resposta ágil
+              </span>
+              <span>Atendimento direto com o próprio titular</span>
+            </div>
+          </div>
+
+          <!-- Assinatura / Autor do Titular (Idêntico ao Rodapé do Print: Avatar + Nome + OAB) -->
+          <div class="pt-4 flex items-center gap-3.5 border-t border-white/[0.08] max-w-lg">
+            <img src="RODRIGO/1.jpeg" alt="Dr. Rodrigo Hilário" class="w-11 h-11 rounded-full object-cover object-top border border-brand-gold/40 shadow-lg" />
+            <div>
+              <p class="text-xs font-bold text-white flex items-center gap-1.5">
+                Dr. Rodrigo Hilário
+                <i class="fa-solid fa-circle-check text-brand-green text-xs"></i>
+              </p>
+              <p class="text-[11px] text-slate-400">
+                OAB/SP nº 536.466 • Titular • Atendimento em todo o Brasil
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. BARRA DE ESPECIALIDADES DOCKADA (JUSTICA INDEX-2)
+       ========================================================================= -->
+  <section id="areas-resumo" class="relative z-30 border-y border-white/[0.08] bg-brand-surface shadow-2xl">
+    <div class="w-full">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        
+        <!-- Coluna 1: Bloco de Título -->
+        <div class="practice-title-block flex flex-col justify-center">
+          <span class="id-color text-xs uppercase font-cinzel font-bold tracking-widest">Especialidades</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white font-heading mt-1 mb-2">Áreas de Atuação</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Atuação técnica especializada em demandas perante o INSS e o sistema bancário.
+          </p>
+          <div class="inline-block px-2.5 py-1 rounded bg-brand-dark border border-brand-gold/30 text-[11px] text-brand-gold font-semibold self-start">
+            OAB/SP nº 536.466
+          </div>
+        </div>
+
+        <!-- Coluna 2: Feature Box Previdenciário -->
+        <div class="feature-box-justica flex flex-col justify-between">
+          <div>
+            <i class="fa-solid fa-hands-holding-child main-icon block"></i>
+            <i class="fa-solid fa-hands-holding-child wm"></i>
+            <h4 class="text-lg font-bold text-white mb-2 font-heading">Benefícios do INSS</h4>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+              BPC / LOAS (idosos e PCD), Auxílio por Incapacidade, Aposentadorias e reversão de pedidos negados pelo INSS.
+            </p>
+          </div>
+          <div>
+            <a href="#previdenciario" class="btn-custom btn-black">Conhecer Mais</a>
+          </div>
+        </div>
+
+        <!-- Coluna 3: Feature Box Salário-Maternidade -->
+        <div class="feature-box-justica flex flex-col justify-between">
+          <div>
+            <i class="fa-solid fa-person-breastfeeding main-icon block"></i>
+            <i class="fa-solid fa-person-breastfeeding wm"></i>
+            <h4 class="text-lg font-bold text-white mb-2 font-heading">Salário-Maternidade</h4>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+              Direito assegurado inclusive para demitidas há mais de 1 ano no período de graça. Cobrança de retroativos de até 5 anos.
+            </p>
+          </div>
+          <div>
+            <a href="#previdenciario" class="btn-custom btn-black">Conhecer Mais</a>
+          </div>
+        </div>
+
+        <!-- Coluna 4: Feature Box Direito Bancário -->
+        <div class="feature-box-justica flex flex-col justify-between">
+          <div>
+            <i class="fa-solid fa-building-columns main-icon block"></i>
+            <i class="fa-solid fa-building-columns wm"></i>
+            <h4 class="text-lg font-bold text-white mb-2 font-heading">Direito Bancário</h4>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+              Responsabilização por golpes do Pix, falso funcionário, empréstimos não autorizados e Lei do Superendividamento.
+            </p>
+          </div>
+          <div>
+            <a href="#bancario" class="btn-custom btn-black">Conhecer Mais</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. BARRA DE MÉTRICAS & INDICADORES
+       ========================================================================= -->
+  <section class="border-b border-white/[0.07] bg-brand-dark/90 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-white/[0.08] text-center">
+        
+        <div class="py-4 px-3">
+          <p class="text-xl sm:text-2xl font-extrabold text-white font-cinzel">26 + DF</p>
+          <p class="text-[11px] font-bold text-brand-gold uppercase tracking-wider mt-1">Estados Atendidos</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Atuação em todo o Brasil</p>
+        </div>
+
+        <div class="py-4 px-3">
+          <p class="text-xl sm:text-2xl font-extrabold text-white font-cinzel">Transparência</p>
+          <p class="text-[11px] font-bold text-brand-gold uppercase tracking-wider mt-1">Sem Custos Ocultos</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Contrato ético e claro</p>
+        </div>
+
+        <div class="py-4 px-3">
+          <p class="text-xl sm:text-2xl font-extrabold text-white font-cinzel">24h</p>
+          <p class="text-[11px] font-bold text-brand-gold uppercase tracking-wider mt-1">Agilidade Inicial</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Retorno rápido sobre o caso</p>
+        </div>
+
+        <div class="py-4 px-3">
+          <p class="text-xl sm:text-2xl font-extrabold text-white font-cinzel">100%</p>
+          <p class="text-[11px] font-bold text-brand-gold uppercase tracking-wider mt-1">Atendimento Digital</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Sem filas e sem cartório</p>
+        </div>
+
+        <div class="py-4 px-3 col-span-2 md:col-span-1">
+          <p class="text-xl sm:text-2xl font-extrabold text-white font-cinzel">OAB/SP</p>
+          <p class="text-[11px] font-bold text-brand-gold uppercase tracking-wider mt-1">Nº 536.466</p>
+          <p class="text-[10px] text-slate-400 mt-0.5">Registro profissional ativo</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SEÇÃO: ADVOCACIA SÉRIA NÃO PROMETE MILAGRE. PROVA MÉTODO.
+       ========================================================================= -->
+  <section id="metodo" class="py-20 sm:py-24 border-b border-white/[0.07]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="max-w-3xl mb-14 space-y-2">
+        <span class="text-xs uppercase tracking-widest font-bold text-brand-gold font-cinzel">
+          MÉTODO • TRANSPARÊNCIA CONTRATUAL
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading">
+          Advocacia séria não promete milagre. Prova método.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Card 01 -->
+        <div class="fusion-card p-8 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded bg-brand-surface border border-white/10 flex items-center justify-center text-brand-gold text-xl">
+                <i class="fa-solid fa-scale-balanced"></i>
+              </div>
+              <span class="text-2xl font-extrabold text-slate-600 font-cinzel">01</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 font-heading">Honorários Éticos & Claros</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Honorários fixados com total clareza e estritamente alinhados à tabela ética da OAB. Você sabe com precisão como o contrato funciona, sem letras miúdas.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="fusion-card p-8 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded bg-brand-surface border border-white/10 flex items-center justify-center text-brand-gold text-xl">
+                <i class="fa-solid fa-file-contract"></i>
+              </div>
+              <span class="text-2xl font-extrabold text-slate-600 font-cinzel">02</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 font-heading">Contrato em português direto</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Sem termos arcaicos ou juridiquês impenetrável. Cláusulas objetivas explicadas em linguagem simples antes de qualquer assinatura eletrônica.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 03 -->
+        <div class="fusion-card p-8 rounded-xl flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded bg-brand-surface border border-white/10 flex items-center justify-center text-brand-gold text-xl">
+                <i class="fa-solid fa-user-check"></i>
+              </div>
+              <span class="text-2xl font-extrabold text-slate-600 font-cinzel">03</span>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2 font-heading">Atuação pessoal do titular</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Seu processo é conduzido e acompanhado diretamente pelo Dr. Rodrigo Hilário em todas as fases, sem terceirização para intermediários anônimos.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. CITAÇÃO EDITORIAL COM FUSÃO VISUAL (REPRODUZINDO O PRINT DO USUÁRIO)
+       ========================================================================= -->
+  <section class="relative py-24 sm:py-28 overflow-hidden bg-brand-dark border-b border-white/[0.07]">
+    
+    <!-- Marca d'Água Monumental de Fundo -->
+    <div class="watermark-letter-bg hidden lg:block opacity-60">“</div>
+
+    <!-- Imagem Lateral Direita Fundindo-se no Fundo -->
+    <div class="absolute right-0 top-0 bottom-0 w-full lg:w-[48%] pointer-events-none flex items-center justify-end overflow-hidden">
+      <div class="relative w-full h-full flex items-center justify-end">
+        <img src="RODRIGO/1.jpeg" alt="Dr. Rodrigo Hilário" class="h-full w-auto max-w-full object-cover object-top fusion-image-mask" />
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/70 to-transparent lg:w-1/2"></div>
+      </div>
+    </div>
+
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="max-w-2xl space-y-6">
+        
+        <!-- Pre-title no Estilo do Print ("— What People Say") -->
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-[2px] bg-brand-gold inline-block"></span>
+          <span class="id-color font-serif-luxury text-base sm:text-lg font-medium tracking-wide">
+            Compromisso Ético & Pessoal
+          </span>
+        </div>
+
+        <!-- Citação com aspas nobres idênticas ao print -->
+        <div class="flex items-start gap-3.5">
+          <i class="fa-solid fa-quote-left text-brand-gold text-2xl sm:text-3xl mt-1.5 opacity-90"></i>
+          <p class="text-lg sm:text-2xl font-serif-luxury italic text-white leading-relaxed font-normal">
+            Trato os casos dos meus clientes com a mesma atenção, dedicação e seriedade com que trataria os meus próprios. Meu compromisso é entregar soluções reais, sem juridiquês e com transparência total.
+          </p>
+        </div>
+
+        <!-- Attribution no Estilo do Print (Avatar + Nome) -->
+        <div class="pt-4 flex items-center gap-4">
+          <img src="RODRIGO/1.jpeg" alt="Dr. Rodrigo Hilário" class="w-12 h-12 rounded-full object-cover object-top border border-brand-gold/50 shadow-md" />
+          <div>
+            <p class="text-sm font-bold text-white">Dr. Rodrigo Hilário</p>
+            <p class="text-xs text-brand-gold">OAB/SP nº 536.466 • Titular</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. DETALHAMENTO DAS ÁREAS: PREVIDENCIÁRIO & BANCÁRIO
+       ========================================================================= -->
+  <section id="previdenciario" class="py-20 sm:py-24 border-b border-white/[0.07]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="max-w-3xl mb-14 space-y-2">
+        <span class="text-xs uppercase tracking-widest font-bold text-brand-gold font-cinzel">
+          ATUAÇÃO COMPLETA
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading">
+          Direito Previdenciário (INSS) e Proteção Bancária
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          Atuação ágil e especializada para defender seus interesses contra decisões injustas do INSS e práticas lesivas de instituições financeiras.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Bloco Previdenciário -->
+        <div class="fusion-card p-8 rounded-xl space-y-5">
+          <div class="flex items-center gap-3 text-brand-gold">
+            <i class="fa-solid fa-scale-unbalanced text-2xl"></i>
+            <h3 class="text-xl font-bold text-white font-heading">Benefícios Previdenciários</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Revisão minuciosa de CNIS, reversão de indeferimentos injustificados e cobrança de parcelas retroativas perante o INSS e a Justiça Federal.
+          </p>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>BPC / LOAS:</strong> Idosos a partir de 65 anos e pessoas com deficiência de baixa renda.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>Salário-Maternidade:</strong> Inclusive para trabalhadoras desligadas em período de graça (até 5 anos do parto).</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>Auxílio por Incapacidade:</strong> Auxílio-Doença, Invalidez e Auxílio-Acidente após perícias falhas.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>Aposentadorias:</strong> Idade, Tempo de Contribuição, regras de transição e Especial.</span>
+            </li>
+          </ul>
+          <div class="pt-2">
+            <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Gostaria%20de%20consultar%20meu%20benef%C3%ADcio%20do%20INSS." target="_blank" class="text-xs font-bold text-brand-gold hover:text-white inline-flex items-center gap-2">
+              <span>Tirar dúvida sobre benefício</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bloco Bancário -->
+        <div id="bancario" class="fusion-card p-8 rounded-xl space-y-5">
+          <div class="flex items-center gap-3 text-brand-gold">
+            <i class="fa-solid fa-building-columns text-2xl"></i>
+            <h3 class="text-xl font-bold text-white font-heading">Direito Bancário & Fraudes</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Responsabilização de bancos por falhas na segurança das transações, golpes virtuais e contratos com encargos abusivos.
+          </p>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-300">
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>Golpes do Pix e Fraudes:</strong> Transferências não reconhecidas e clonagem com falha no sistema antifraude.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>Empréstimos Não Autorizados:</strong> Contratações indevidas em conta ou benefício com pedido de anulação e restituição.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>Cartão RMC / RCC:</strong> Descontos perpétuos em folha de aposentados para amortização infinita de juros.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <i class="fa-solid fa-check text-brand-green mt-1"></i>
+              <span><strong>Lei do Superendividamento:</strong> Repactuação global de dívidas para assegurar a preservação do mínimo existencial.</span>
+            </li>
+          </ul>
+          <div class="pt-2">
+            <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Gostaria%20de%20orienta%C3%A7%C3%A3o%20sobre%20um%20problema%20com%20meu%20banco." target="_blank" class="text-xs font-bold text-brand-gold hover:text-white inline-flex items-center gap-2">
+              <span>Orientação contra o banco</span>
+              <i class="fa-solid fa-arrow-right text-[11px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. SEÇÃO: COMO FUNCIONA O ATENDIMENTO ONLINE (4 PASSOS)
+       ========================================================================= -->
+  <section id="como-funciona" class="py-20 sm:py-24 border-b border-white/[0.07]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="max-w-3xl mb-14 space-y-2">
+        <span class="text-xs uppercase tracking-widest font-bold text-brand-gold font-cinzel">
+          DO PRIMEIRO CONTATO À SOLUÇÃO
+        </span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading">
+          Como funciona o atendimento online?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Passo 01 -->
+        <div class="fusion-card p-6 rounded-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brand-gold text-xl">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <span class="text-xl font-extrabold text-slate-600 font-cinzel">01</span>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2 font-heading">Fale no WhatsApp</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Você nos conta o que aconteceu pelo WhatsApp de forma simples, no seu tempo e sem termos complicados.
+          </p>
+        </div>
+
+        <!-- Passo 02 -->
+        <div class="fusion-card p-6 rounded-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brand-gold text-xl">
+              <i class="fa-solid fa-file-arrow-up"></i>
+            </div>
+            <span class="text-xl font-extrabold text-slate-600 font-cinzel">02</span>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2 font-heading">Envie Documentos</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Você envia fotos legíveis ou PDFs pelo próprio celular. Seus arquivos ficam salvos em ambiente seguro.
+          </p>
+        </div>
+
+        <!-- Passo 03 -->
+        <div class="fusion-card p-6 rounded-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brand-gold text-xl">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <span class="text-xl font-extrabold text-slate-600 font-cinzel">03</span>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2 font-heading">Análise em 24h</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            O Dr. Rodrigo estuda seu caso pessoalmente e apresenta a viabilidade e os próximos passos cabíveis.
+          </p>
+        </div>
+
+        <!-- Passo 04 -->
+        <div class="fusion-card p-6 rounded-xl">
+          <div class="flex items-center justify-between mb-4">
+            <div class="text-brand-gold text-xl">
+              <i class="fa-solid fa-gavel"></i>
+            </div>
+            <span class="text-xl font-extrabold text-slate-600 font-cinzel">04</span>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2 font-heading">Ação e protocolo</h3>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Protocolamos o pedido no INSS ou a ação na Justiça. Você recebe o comprovante e atualizações constantes.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       10. DÚVIDAS FREQUENTES (FAQ ACCORDION)
+       ========================================================================= -->
+  <section id="faq" class="py-20 sm:py-24 border-b border-white/[0.07]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-14 gap-4">
+        <div class="space-y-2">
+          <span class="text-xs uppercase tracking-widest font-bold text-brand-gold font-cinzel">
+            DÚVIDAS FREQUENTES
+          </span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-heading">
+            Perguntas mais comuns dos clientes
+          </h2>
+        </div>
+        <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Ainda%20tenho%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" class="text-xs font-bold text-brand-gold hover:text-white inline-flex items-center gap-1.5 self-start sm:self-auto">
+          <span>Ainda com dúvidas? Pergunte no WhatsApp</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item fusion-card rounded-xl p-6">
+          <button class="faq-trigger w-full text-left flex items-center justify-between text-sm sm:text-base font-bold text-white focus:outline-none gap-4">
+            <span>Meu caso é antigo. Demorou para entrar com a ação?</span>
+            <i class="fa-solid fa-plus faq-icon text-slate-400 transition-transform duration-300 text-sm"></i>
+          </button>
+          <div class="faq-content text-slate-300 text-xs sm:text-sm leading-relaxed pt-3 border-t border-white/[0.07] mt-3">
+            Para a maioria das cobranças indevidas, golpes bancários e direitos no INSS (como o salário-maternidade), o prazo prescricional para cobrança é de até 5 anos. Mesmo que tenha acontecido há algum tempo, seus direitos podem estar plenamente vigentes.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item fusion-card rounded-xl p-6">
+          <button class="faq-trigger w-full text-left flex items-center justify-between text-sm sm:text-base font-bold text-white focus:outline-none gap-4">
+            <span>Fui demitida há mais de 1 ano. Tenho salário-maternidade?</span>
+            <i class="fa-solid fa-plus faq-icon text-slate-400 transition-transform duration-300 text-sm"></i>
+          </button>
+          <div class="faq-content text-slate-300 text-xs sm:text-sm leading-relaxed pt-3 border-t border-white/[0.07] mt-3">
+            Sim! A legislação prevê o "período de graça", que mantém a qualidade de segurada de 12 a até 36 meses após a saída do emprego. Se o nascimento ocorreu dentro desse período, você tem direito ao valor integral do benefício.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item fusion-card rounded-xl p-6">
+          <button class="faq-trigger w-full text-left flex items-center justify-between text-sm sm:text-base font-bold text-white focus:outline-none gap-4">
+            <span>O banco disse que não pode fazer nada sobre o golpe do Pix...</span>
+            <i class="fa-solid fa-plus faq-icon text-slate-400 transition-transform duration-300 text-sm"></i>
+          </button>
+          <div class="faq-content text-slate-300 text-xs sm:text-sm leading-relaxed pt-3 border-t border-white/[0.07] mt-3">
+            Essa é a resposta padrão da maioria dos bancos. No entanto, a Súmula 479 do STJ define que as instituições financeiras respondem objetivamente por falhas na segurança. Havendo falha na detecção de fraude atípica, é possível exigir a reparação judicialmente.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item fusion-card rounded-xl p-6">
+          <button class="faq-trigger w-full text-left flex items-center justify-between text-sm sm:text-base font-bold text-white focus:outline-none gap-4">
+            <span>Como é o contato com o advogado durante o processo?</span>
+            <i class="fa-solid fa-plus faq-icon text-slate-400 transition-transform duration-300 text-sm"></i>
+          </button>
+          <div class="faq-content text-slate-300 text-xs sm:text-sm leading-relaxed pt-3 border-t border-white/[0.07] mt-3">
+            Você tem canal direto com o Dr. Rodrigo Hilário pelo WhatsApp. Sempre que houver um despacho, protocolo ou decisão, você recebe avisos claros em linguagem simples sobre o andamento.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       11. SEÇÃO FINAL / CALLOUT EDITORIAL
+       ========================================================================= -->
+  <section class="py-16 sm:py-24 border-b border-white/[0.07]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      <div class="fusion-card rounded-2xl p-8 sm:p-12 lg:p-16 relative overflow-hidden border border-brand-gold/25">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-8 space-y-6">
+            <span class="text-xs uppercase tracking-widest font-bold text-brand-gold font-cinzel">
+              PRAZOS PRESCRICIONAIS • AÇÃO ESTRATÉGICA
+            </span>
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-heading leading-tight">
+              Não deixe seus direitos prescreverem no silêncio.
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl font-normal">
+              Prazos do INSS e medidas contra abusos bancários correm contra você. Converse diretamente com o Dr. Rodrigo e descubra se o seu caso tem reparação legítima.
+            </p>
+            <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+              <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Acessei%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" rel="noopener noreferrer" class="btn-custom text-xs sm:text-sm font-bold">
+                <i class="fa-regular fa-comments text-lg"></i>
+                <span>Iniciar análise inicial no WhatsApp</span>
+              </a>
+            </div>
+            <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400 pt-1">
+              <span><i class="fa-solid fa-check text-brand-green mr-1.5"></i>Sem burocracia</span>
+              <span><i class="fa-solid fa-check text-brand-green mr-1.5"></i>Atendimento 100% online</span>
+              <span><i class="fa-solid fa-check text-brand-green mr-1.5"></i>Sigilo garantido</span>
+            </div>
+          </div>
+
+          <!-- Miniatura do Advogado no Card Final -->
+          <div class="lg:col-span-4 flex flex-col items-center justify-center">
+            <div class="w-full max-w-[240px] rounded-lg overflow-hidden bg-brand-dark border border-white/10 shadow-2xl">
+              <img src="RODRIGO/1.jpeg" alt="Dr. Rodrigo Hilário" class="w-full h-56 object-cover object-top filter contrast-110" />
+              <div class="p-3 bg-brand-surface text-center">
+                <p class="text-xs font-bold text-white">Dr. Rodrigo Hilário</p>
+                <p class="text-[10px] text-brand-gold font-cinzel">OAB/SP nº 536.466</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. FOOTER INSTITUCIONAL & ÉTICA OAB
+       ========================================================================= -->
+  <footer class="bg-brand-dark text-slate-400 text-xs py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-10 border-b border-white/[0.07]">
+        
+        <!-- Identidade e Registro -->
+        <div class="space-y-3">
+          <img src="logo/LogosSemFundo/SVG/logodourado-2.svg" alt="Rodrigo Hilário Advocacia" class="h-9 w-auto" />
+          <p class="text-slate-400 text-xs leading-relaxed">
+            Assessoria individualizada em Direito Previdenciário e Direito Bancário. Atendimento 100% digital em todo o Brasil.
+          </p>
+          <p class="text-brand-gold font-semibold font-cinzel">OAB/SP nº 536.466</p>
+        </div>
+
+        <!-- Contato Oficial -->
+        <div class="space-y-2">
+          <p class="text-xs font-bold text-white uppercase tracking-wider font-cinzel">Contato & Atendimento</p>
+          <p><strong>WhatsApp:</strong> (11) 94522-1206</p>
+          <p><strong>E-mail:</strong> rodrigo.hilario@adv.oabsp.org.br</p>
+          <p><strong>Registro:</strong> Av. Antônio Diogo, 703 - Vila Ré, São Paulo - SP</p>
+        </div>
+
+        <!-- Ética OAB -->
+        <div class="space-y-2">
+          <p class="text-xs font-bold text-white uppercase tracking-wider font-cinzel">Aviso Ético OAB</p>
+          <p class="text-[11px] leading-relaxed text-slate-400">
+            Este site tem finalidade estritamente informativa e educacional, em conformidade com o Código de Ética e Disciplina da OAB e o Provimento nº 205/2021 do CFOAB. A advocacia é atividade de meio, não garantindo êxito processual específico.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500 text-center sm:text-left">
+        <div>
+          © 2026 Rodrigo Hilário Advocacia. Todos os direitos reservados.
+        </div>
+        <div>
+          Privacidade & LGPD em Conformidade • OAB/SP 536.466
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       13. BOTÃO FLUTUANTE DO WHATSAPP
+       ========================================================================= -->
+  <div class="fixed bottom-6 right-6 z-50 flex items-end gap-3">
+    <div id="waTooltip" class="hidden sm:flex items-center gap-2 bg-brand-surface border border-brand-gold/30 text-white text-xs px-3.5 py-2.5 rounded-xl shadow-2xl backdrop-blur-md">
+      <span>Dúvida sobre INSS ou banco? Fale conosco!</span>
+      <button id="waTooltipDismiss" class="text-slate-400 hover:text-white ml-1 p-0.5" title="Fechar">
+        <i class="fa-solid fa-xmark text-xs"></i>
+      </button>
+    </div>
+    <a href="https://wa.me/5511945221206?text=Ol%C3%A1%2C%20Dr.%20Rodrigo!%20Acessei%20seu%20site%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20meu%20caso." target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center text-3xl shadow-2xl whatsapp-pulse hover:scale-110 transition-transform" aria-label="Falar no WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Scripts Interativos -->
+  <script src="script.js"></script>
+</body>
+</html>

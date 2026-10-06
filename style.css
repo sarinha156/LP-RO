@@ -1,0 +1,241 @@
+/* ==========================================================================
+   RODRIGO HILÁRIO ADVOCACIA - TEMA FUSION & EDITORIAL MODERNO
+   Inspirado no efeito de imagem fundida ao fundo (Screenshot do usuário & Justica / Procounsel)
+   Cores: Dourado Âmbar (#EAA636 / #DF9B28), Noturno Profundo (#060911 / #0A0F1D), Marsala (#7A1C1D)
+   Tipografia: Cinzel, Playfair Display, Montserrat e Plus Jakarta Sans
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --primary-color: #EAA636;
+  --primary-color-hover: #F5B853;
+  --bg-dark: #060911;
+  --bg-surface: #0B1120;
+  --bg-card: #0F172A;
+  --bg-card-hover: #15223E;
+  --color-marsala: #7A1C1D;
+  --color-green: #10B981;
+  --color-text-main: #F8FAFC;
+  --color-text-muted: #94A3B8;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-gold: rgba(234, 166, 54, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-text-main);
+  background-color: var(--bg-dark);
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.id-color {
+  color: var(--primary-color) !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #060911;
+}
+::-webkit-scrollbar-thumb {
+  background: #17233D;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* ==========================================================================
+   EFEITO DE FUSÃO DA IMAGEM COM O FUNDO (FUSION BLEND)
+   Conforme o print de referência enviado pelo usuário:
+   A imagem não fica dentro de caixa com borda; ela se desfaz no fundo escuro
+   ========================================================================== */
+.fusion-image-mask {
+  -webkit-mask-image: radial-gradient(circle at 65% 45%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0) 80%),
+                      linear-gradient(to right, transparent 0%, black 25%),
+                      linear-gradient(to top, transparent 0%, black 25%);
+  mask-image: radial-gradient(circle at 65% 45%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0) 80%),
+              linear-gradient(to right, transparent 0%, black 25%),
+              linear-gradient(to top, transparent 0%, black 25%);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  filter: contrast(110%) brightness(95%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+}
+
+.fusion-image-mask:hover {
+  transform: scale(1.02);
+  filter: contrast(115%) brightness(100%);
+}
+
+/* Marca d'Água Gigante Monograma / Tipografia (Como o 'Q' do print) */
+.watermark-letter-bg {
+  position: absolute;
+  font-family: 'Playfair Display', serif;
+  font-size: 320px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(234, 166, 54, 0.04);
+  top: 50%;
+  left: 5%;
+  transform: translateY(-55%);
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+/* Botão Estilo Justica (.btn-custom) */
+.btn-custom {
+  background-color: var(--primary-color);
+  color: #060911;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 14px 32px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(234, 166, 54, 0.3);
+}
+
+.btn-custom:hover {
+  background-color: var(--primary-color-hover);
+  color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(234, 166, 54, 0.45);
+}
+
+.btn-custom.btn-black {
+  background-color: #060911;
+  color: var(--primary-color);
+  border: 1px solid var(--border-gold);
+  padding: 8px 18px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: none;
+}
+
+.btn-custom.btn-black:hover {
+  background-color: var(--primary-color);
+  color: #060911;
+  border-color: var(--primary-color);
+}
+
+/* Barra de Especialidades Dockada (Justica index-2) */
+.practice-title-block {
+  background: linear-gradient(145deg, #060911 0%, #0B1120 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 40px 32px;
+}
+
+.feature-box-justica {
+  position: relative;
+  overflow: hidden !important;
+  background: rgba(11, 17, 32, 0.95);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 40px 32px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-box-justica:hover {
+  background: #111A30;
+}
+
+.feature-box-justica .main-icon {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+
+.feature-box-justica:hover .main-icon {
+  transform: scale(1.1);
+}
+
+.feature-box-justica .wm {
+  position: absolute;
+  font-size: 170px;
+  right: -25px;
+  bottom: -20px;
+  color: rgba(234, 166, 54, 0.04);
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.feature-box-justica:hover .wm {
+  color: rgba(234, 166, 54, 0.09);
+  transform: rotate(-18deg) scale(1.08);
+}
+
+/* Cards Interativos */
+.fusion-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fusion-card:hover {
+  border-color: var(--border-gold);
+  background: var(--bg-card-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* FAQ Accordion */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  opacity: 0;
+}
+
+.faq-item.active .faq-content {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: var(--primary-color);
+}
+
+/* Floating WhatsApp Pulse */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-pulse {
+  animation: pulse-ring 2.5s infinite;
+}
