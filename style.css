@@ -1,241 +1,558 @@
 /* ==========================================================================
-   RODRIGO HILÁRIO ADVOCACIA - TEMA FUSION & EDITORIAL MODERNO
-   Inspirado no efeito de imagem fundida ao fundo (Screenshot do usuário & Justica / Procounsel)
-   Cores: Dourado Âmbar (#EAA636 / #DF9B28), Noturno Profundo (#060911 / #0A0F1D), Marsala (#7A1C1D)
-   Tipografia: Cinzel, Playfair Display, Montserrat e Plus Jakarta Sans
+   RODRIGO HILÁRIO ADVOCACIA — DESIGN EDITORIAL, AUTORAL & HUMANIZADO
+   Paleta: Deep Midnight Canvas (#070A11), Warm Obsidian (#0D121F), Ouro Escovado (#C8A261), Marsala (#7A1C1D)
+   Tipografia: Playfair Display (Serif Editorial) + Plus Jakarta Sans (Texto & UI)
+   Conformidade Estrita: Provimento CFOAB nº 205/2021
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 :root {
-  --primary-color: #EAA636;
-  --primary-color-hover: #F5B853;
-  --bg-dark: #060911;
-  --bg-surface: #0B1120;
-  --bg-card: #0F172A;
-  --bg-card-hover: #15223E;
+  /* Cores de Fundo & Superfícies */
+  --bg-canvas: #070A11;
+  --bg-surface: #0D121F;
+  --bg-surface-elevated: #131A2B;
+  --bg-subtle-overlay: rgba(13, 18, 31, 0.7);
+
+  /* Ouro Escovado & Acentos Nobres */
+  --gold-primary: #C8A261;
+  --gold-hover: #DFBA73;
+  --gold-light: #F0DDB3;
+  --gold-hairline: rgba(200, 162, 97, 0.28);
+  --gold-glow: rgba(200, 162, 97, 0.08);
+
+  /* Tons Institucionais */
   --color-marsala: #7A1C1D;
+  --color-navy: #16223B;
   --color-green: #10B981;
-  --color-text-main: #F8FAFC;
-  --color-text-muted: #94A3B8;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-gold: rgba(234, 166, 54, 0.35);
+
+  /* Tipografia & Contraste */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #8E9BAE;
+  --text-faint: #5A6679;
+
+  /* Hairlines & Divisores */
+  --hairline: rgba(255, 255, 255, 0.08);
+  --hairline-hover: rgba(255, 255, 255, 0.18);
+
+  /* Fontes */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ==========================================================================
+   RESET & FUNDAÇÃO GLOBAL
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: var(--color-text-main);
-  background-color: var(--bg-dark);
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-secondary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: -0.02em;
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--bg-canvas);
+  line-height: 1.65;
 }
 
-.font-serif-luxury {
-  font-family: 'Playfair Display', serif;
-}
-
-.font-cinzel {
-  font-family: 'Cinzel', serif;
-}
-
-.id-color {
-  color: var(--primary-color) !important;
-}
-
-/* Custom Scrollbar */
+/* Custom Scrollbar Discreto */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #060911;
+  background: var(--bg-canvas);
 }
 ::-webkit-scrollbar-thumb {
-  background: #17233D;
-  border-radius: 4px;
+  background: #172236;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
+  background: var(--gold-primary);
+}
+
+/* Foco Acessível (WCAG AA/AAA) */
+:focus-visible {
+  outline: 2px solid var(--gold-primary);
+  outline-offset: 3px;
 }
 
 /* ==========================================================================
-   EFEITO DE FUSÃO DA IMAGEM COM O FUNDO (FUSION BLEND)
-   Conforme o print de referência enviado pelo usuário:
-   A imagem não fica dentro de caixa com borda; ela se desfaz no fundo escuro
+   TIPOGRAFIA EDITORIAL
    ========================================================================== */
-.fusion-image-mask {
-  -webkit-mask-image: radial-gradient(circle at 65% 45%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0) 80%),
-                      linear-gradient(to right, transparent 0%, black 25%),
-                      linear-gradient(to top, transparent 0%, black 25%);
-  mask-image: radial-gradient(circle at 65% 45%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.8) 60%, rgba(0,0,0,0) 80%),
-              linear-gradient(to right, transparent 0%, black 25%),
-              linear-gradient(to top, transparent 0%, black 25%);
+.font-editorial-serif {
+  font-family: var(--font-serif);
+  letter-spacing: -0.015em;
+}
+
+.font-editorial-sans {
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4 {
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Dourado Oficial */
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.border-gold {
+  border-color: var(--gold-hairline);
+}
+
+/* ==========================================================================
+   EFEITO DE FUSÃO DA IMAGEM COM O FUNDO (FUSION BLEND CINEMATOGRÁFICO)
+   O retrato do advogado emerge diretamente da sombra escura sem caixas ou bordas
+   ========================================================================== */
+.hero-fusion-portrait {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.hero-fusion-portrait img {
+  max-height: 820px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: contrast(108%) brightness(92%);
+  -webkit-mask-image: radial-gradient(circle at 62% 40%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 82%),
+                      linear-gradient(to right, transparent 0%, rgba(0,0,0,0.7) 20%, black 45%),
+                      linear-gradient(to top, transparent 0%, rgba(0,0,0,0.9) 25%, black 60%);
+  mask-image: radial-gradient(circle at 62% 40%, rgba(0,0,0,1) 40%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 82%),
+              linear-gradient(to right, transparent 0%, rgba(0,0,0,0.7) 20%, black 45%),
+              linear-gradient(to top, transparent 0%, rgba(0,0,0,0.9) 25%, black 60%);
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
-  filter: contrast(110%) brightness(95%);
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
 }
 
-.fusion-image-mask:hover {
-  transform: scale(1.02);
-  filter: contrast(115%) brightness(100%);
+.hero-fusion-portrait:hover img {
+  transform: scale(1.015);
+  filter: contrast(112%) brightness(96%);
 }
 
-/* Marca d'Água Gigante Monograma / Tipografia (Como o 'Q' do print) */
+/* Versão Mobile Específica da Foto no Hero */
+.mobile-hero-portrait {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 28px auto 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-hero-portrait img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  object-fit: cover;
+  object-position: top center;
+  filter: contrast(108%) brightness(92%);
+  -webkit-mask-image: radial-gradient(circle at 50% 40%, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 80%),
+                      linear-gradient(to top, transparent 0%, black 25%);
+  mask-image: radial-gradient(circle at 50% 40%, rgba(0,0,0,1) 45%, rgba(0,0,0,0) 80%),
+              linear-gradient(to top, transparent 0%, black 25%);
+}
+
+/* Fusão Lateral para Seção de Citação */
+.quote-fusion-img {
+  filter: contrast(105%) brightness(90%);
+  -webkit-mask-image: radial-gradient(circle at 70% 50%, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 75%),
+                      linear-gradient(to right, transparent 0%, black 30%);
+  mask-image: radial-gradient(circle at 70% 50%, rgba(0,0,0,1) 35%, rgba(0,0,0,0) 75%),
+              linear-gradient(to right, transparent 0%, black 30%);
+}
+
+/* Marca d'Água Monumental de Profundidade (Letras 'RH' ou Aspas Nobres) */
 .watermark-letter-bg {
   position: absolute;
-  font-family: 'Playfair Display', serif;
-  font-size: 320px;
+  font-family: var(--font-serif);
+  font-size: clamp(180px, 24vw, 380px);
   font-weight: 700;
   line-height: 1;
-  color: rgba(234, 166, 54, 0.04);
+  color: rgba(200, 162, 97, 0.035);
   top: 50%;
-  left: 5%;
-  transform: translateY(-55%);
+  left: -2%;
+  transform: translateY(-50%);
   pointer-events: none;
   user-select: none;
   z-index: 1;
+  letter-spacing: -0.05em;
 }
 
-/* Botão Estilo Justica (.btn-custom) */
-.btn-custom {
-  background-color: var(--primary-color);
-  color: #060911;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  padding: 14px 32px;
-  border-radius: 4px;
+/* ==========================================================================
+   BOTÕES EDITORIAIS & AÇÕES (SEM NEON, COM REFINAMENTO NOBRE)
+   ========================================================================= */
+.btn-gold-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  background-color: var(--gold-primary);
+  color: #070A11;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  padding: 15px 32px;
+  border-radius: 4px;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 18px rgba(234, 166, 54, 0.3);
+  box-shadow: 0 4px 20px rgba(200, 162, 97, 0.25);
+  border: 1px solid var(--gold-primary);
 }
 
-.btn-custom:hover {
-  background-color: var(--primary-color-hover);
+.btn-gold-primary:hover {
+  background-color: var(--gold-hover);
   color: #000000;
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(234, 166, 54, 0.45);
+  box-shadow: 0 8px 30px rgba(200, 162, 97, 0.4);
 }
 
-.btn-custom.btn-black {
-  background-color: #060911;
-  color: var(--primary-color);
-  border: 1px solid var(--border-gold);
-  padding: 8px 18px;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  box-shadow: none;
+.btn-editorial-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  padding: 15px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid var(--hairline-hover);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.btn-custom.btn-black:hover {
-  background-color: var(--primary-color);
-  color: #060911;
-  border-color: var(--primary-color);
+.btn-editorial-ghost:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  background-color: rgba(200, 162, 97, 0.05);
+  transform: translateY(-2px);
 }
 
-/* Barra de Especialidades Dockada (Justica index-2) */
-.practice-title-block {
-  background: linear-gradient(145deg, #060911 0%, #0B1120 100%);
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 40px 32px;
-}
-
-.feature-box-justica {
+/* Link com Underline Editorial Animado */
+.editorial-link {
   position: relative;
-  overflow: hidden !important;
-  background: rgba(11, 17, 32, 0.95);
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 40px 32px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
 }
 
-.feature-box-justica:hover {
-  background: #111A30;
-}
-
-.feature-box-justica .main-icon {
-  font-size: 32px;
-  color: var(--primary-color);
-  margin-bottom: 18px;
-  transition: transform 0.3s ease;
-}
-
-.feature-box-justica:hover .main-icon {
-  transform: scale(1.1);
-}
-
-.feature-box-justica .wm {
+.editorial-link::after {
+  content: '';
   position: absolute;
-  font-size: 170px;
-  right: -25px;
-  bottom: -20px;
-  color: rgba(234, 166, 54, 0.04);
-  pointer-events: none;
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: var(--gold-primary);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.feature-box-justica:hover .wm {
-  color: rgba(234, 166, 54, 0.09);
-  transform: rotate(-18deg) scale(1.08);
+.editorial-link:hover {
+  color: var(--gold-hover);
 }
 
-/* Cards Interativos */
-.fusion-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+.editorial-link:hover::after {
+  width: 100%;
 }
 
-.fusion-card:hover {
-  border-color: var(--border-gold);
-  background: var(--bg-card-hover);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.6);
+/* ==========================================================================
+   ÍNDICE EDITORIAL DE ESPECIALIDADES (SUBSTITUI CARDS GENÉRICOS)
+   ========================================================================== */
+.editorial-practice-item {
+  position: relative;
+  border-top: 1px solid var(--hairline);
+  padding: 36px 0;
+  transition: all 0.35s ease;
 }
 
-/* FAQ Accordion */
-.faq-content {
+.editorial-practice-item:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.editorial-practice-item:hover {
+  border-color: var(--gold-hairline);
+}
+
+.editorial-practice-item .area-number {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gold-primary);
+  letter-spacing: 0.05em;
+}
+
+.editorial-practice-item .area-title {
+  font-family: var(--font-serif);
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.editorial-practice-item:hover .area-title {
+  color: var(--gold-light);
+}
+
+/* Pílula de Tag Sutil */
+.tag-subtle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--hairline);
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   LINHA DO TEMPO HORIZONTAL / STEPPER EDITORIAL
+   ========================================================================== */
+.stepper-node {
+  position: relative;
+  padding-top: 24px;
+}
+
+.stepper-node::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--hairline);
+  transition: background 0.3s ease;
+}
+
+.stepper-node:hover::before {
+  background: var(--gold-primary);
+}
+
+.stepper-num {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION MINIMALISTA (SEM CARDS PESADOS)
+   ========================================================================== */
+.faq-row {
+  border-top: 1px solid var(--hairline);
+  padding: 24px 0;
+  transition: border-color 0.3s ease;
+}
+
+.faq-row:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.faq-row:hover {
+  border-color: var(--gold-hairline);
+}
+
+.faq-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+  gap: 16px;
+}
+
+.faq-button:hover {
+  color: var(--gold-primary);
+}
+
+.faq-button .faq-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--hairline);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: var(--gold-primary);
+  flex-shrink: 0;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.faq-row.active .faq-button .faq-icon {
+  transform: rotate(45deg);
+  border-color: var(--gold-primary);
+  background: rgba(200, 162, 97, 0.1);
+}
+
+.faq-panel {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
   opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, padding-top 0.3s ease;
 }
 
-.faq-item.active .faq-content {
-  max-height: 500px;
+.faq-row.active .faq-panel {
+  max-height: 400px;
   opacity: 1;
+  padding-top: 16px;
 }
 
-.faq-item.active .faq-icon {
-  transform: rotate(45deg);
-  color: var(--primary-color);
+/* ==========================================================================
+   MOLDURA BIOGRÁFICA DO TITULAR
+   ========================================================================== */
+.bio-portrait-frame {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--hairline);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
 }
 
-/* Floating WhatsApp Pulse */
-@keyframes pulse-ring {
+.bio-portrait-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(105%) brightness(95%);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bio-portrait-frame:hover img {
+  transform: scale(1.02);
+}
+
+.bio-seal-badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(7, 10, 17, 0.92);
+  border: 1px solid var(--gold-hairline);
+  padding: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+  backdrop-blur: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   WHATSAPP FLUTUANTE REFINADO
+   ========================================================================== */
+@keyframes soft-pulse {
   0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
   }
   70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
   }
   100% {
-    transform: scale(0.95);
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
 
-.whatsapp-pulse {
-  animation: pulse-ring 2.5s infinite;
+.whatsapp-float-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  animation: soft-pulse 2.8s infinite;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float-btn:hover {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE & MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .watermark-letter-bg {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .btn-gold-primary, .btn-editorial-ghost {
+    width: 100%;
+    padding: 14px 20px;
+  }
+  .editorial-practice-item {
+    padding: 24px 0;
+  }
+  .editorial-practice-item .area-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* Respeito a Prefers-Reduced-Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
